@@ -1,0 +1,334 @@
+/* Reset Padding dan Margin */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Mengatur Font */
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+h1, h2, h3, h4 {
+    color: #1B9C85;
+}
+
+/* Mengatur Header */
+header {
+    text-align: center;
+    padding: 20px;
+    display: inline;
+}
+
+h1 span {
+    color: #884A39;
+}
+
+.logo {
+    margin: 30px auto;
+}
+
+.logo h1 {
+    text-decoration: underline;
+    text-decoration-color: #884A39;
+    text-underline-offset: 4px;
+    text-shadow: 2px 2px 0px #C7BCA1;
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 3em;
+}
+
+.logo p {
+    color: #17594A;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Mengatur Navigasi */
+nav {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    height: 50px;
+    align-items: center;
+    border-bottom: solid 2px #C7BCA1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #17594A;
+    font-weight: 600;
+    padding: 10px 40px;
+}
+
+a:visited {
+    color: #17594A;
+}
+
+a:hover {
+    background-color: #238870;
+    color: #fff;
+    border-radius: 5px;
+}
+
+a:active{
+    background-color: #884A39;
+}
+
+/* Hamburger Menu		*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #17594A;
+    border-radius: 3px;
+    transition: all 0.5s;
+
+}
+
+/* Hamburger Menu Animation	*/
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+
+/* Mengatur Content */
+main {
+    display: flex;
+    justify-content:space-around;   
+}
+
+.content {
+    width: 70%;
+}
+
+.cards {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-image img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.card-items {
+    padding: 20px;
+}
+
+.card-title h3:hover {
+    color: #884A39;
+}
+
+.card-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.card-btn{
+    text-align: right;
+}
+
+button {
+    padding: 20px;
+    color: #17594A;
+    background-color: #fff;
+    border: none;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #17594A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #884A39;
+}
+
+
+
+/* Mengatur Aside */
+aside {
+    width: 25%;
+}
+
+/* Mengatur Profil */
+section {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+
+}
+.profil img{
+    width: 150px;
+    background-color: #17594A;
+    border-radius: 75px;
+    margin-bottom: 15px;
+}
+
+.profil header, .kontak header {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    display: block;
+}
+
+.profil header {
+    background-color: #238870;
+}
+
+.kontak header {
+    background-color: #884A39;
+}
+
+header h3 {
+    color: #fff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px auto;
+    border-radius: 10px;
+    border-color: #C7BCA1;
+}
+
+.btn {
+    border: 1px solid #884A39;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #884A39;
+}
+
+/* Mengatur Footer */
+footer {
+    padding: 20px;
+    color: #fff;
+    background-color: #17594A;
+    text-align: center;
+}
+
+/* Mengatur Responsive */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .content, aside, header{
+        width: 100%;
+    }
+    
+    main {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        width: 55%;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+
+/* Handphone */
+@media screen and (max-width: 576px){
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card-description, .card-btn {
+        text-align: center;
+    }
+
+    .card-btn button{
+        border: 1px solid #17594A;
+        border-radius: 5px;
+    }
+}
